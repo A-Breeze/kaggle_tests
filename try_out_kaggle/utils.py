@@ -4,10 +4,11 @@
 # Setup #
 #########
 # Module variables
-__version__ = '0.1.0'  # Useful for checks when running the notebook
+__version__ = '0.2.0'  # Useful for checks when running the notebook
 
 # Import built-in modules
 from pathlib import Path
+from urllib.request import urlopen
 
 # Import external modules
 # [None yet]
@@ -43,3 +44,15 @@ def tree(dir_path: Path, prefix: str=''):
             extension = branch if pointer == tee else space 
             # i.e. space because last, └── , above so no more |
             yield from tree(path, prefix=prefix+extension)
+
+##############################
+# Interact with the internet #
+##############################
+def is_internet_accessible(test_address='https://www.google.com/'):
+    """Quick test to see whether we can access the internet"""
+    try:
+        response = urlopen(test_address, timeout=10)
+        return True
+    except: 
+        return False
+

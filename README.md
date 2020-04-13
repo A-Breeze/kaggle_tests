@@ -3,7 +3,10 @@ This is an example of how to import a Python module that is saved in a GitHub re
 
 The accompanying notebook, including further instructions, is here: <https://www.kaggle.com/btw78jt/try-out-kaggle>.
 
-## Further notes
+## Other resources
+### `IPython` magic commands in Kaggle Kernels
+Including `%%javascript` pop-up boxes: <https://www.kaggle.com/morrisb/ipython-magic-functions>
+
 ### Downloading Kaggle datasets
 This can be done using the Kaggle CLI (which sends commands to the Kaggle API). Specific notes:
 - To download using the Kaggle Python package (*not* the Kaggle CLI): <https://stackoverflow.com/a/54869077>. But this does not load into memory, so not that good.
